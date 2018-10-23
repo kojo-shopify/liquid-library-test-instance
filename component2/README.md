@@ -1,12 +1,7 @@
 # Component 1
-Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula.
+Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
 
  ## Table of contents
-<<<<<<< HEAD
-1. [Dropdown Functionality](#dropdown-functionality)
-2. [Breadcrumb Navigation](#breadcrumb-navigation)
- 
-=======
 1. [Breadcrumb Navigation](#breadcrumb-navigation) 
  
  
@@ -31,4 +26,3 @@ A Breadcrumb navigation or breadcrumbs, can reduce the number of actions a visit
       <li> {{ collection.title | link_to: collection.url }}</li>
 ```
 `#navigation` `#linklist` 
->>>>>>> 86dae77682136632f90dca5648dcef2041ddc3ec
