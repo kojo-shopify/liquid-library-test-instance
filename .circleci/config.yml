@@ -20,9 +20,17 @@ jobs:
           name: Build landing page README.md
           command: 'll_build_main'
       - run:
-          name: BRANCH
+          name: TEST
           command: |
             if [ '0' = 'echo git diff --cached --numstat | wc -l' ]; then
+              echo "true"
+            else
+              echo "false"
+            fi
+      - run:
+          name: BRANCH
+          command: |
+            if [ '$CIRCLE_BRANCH' = 'master' ]; then
               echo "true"
             else
               echo "false"
