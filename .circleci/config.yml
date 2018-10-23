@@ -3,14 +3,13 @@ jobs:
   build:
     docker:
       - image: circleci/node
+    environment:
+      PATH: /home/circleci/.yarn/bin:$PATH
     steps:
       - checkout
       - run:
           name: Install yarn packages
           command: 'yarn global add https://github.com/kojo-shopify/liquid-library-test-compiler'
-      - run:
-          name: Update PATH
-          command: 'export PATH="$(yarn global bin):$PATH"'
       - run:
           name: Test path
           command: 'echo $PATH'
