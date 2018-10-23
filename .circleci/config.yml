@@ -19,14 +19,6 @@ jobs:
       - run:
           name: Build landing page README.md
           command: 'll_build_main'
-      - run:
-          name: BRANCH
-          command: |
-            if [ '0' >= 'git diff --numstat | wc -l' ]; then
-              echo $CIRCLE_USER
-            else
-              echo $CIRCLE_USER
-            fi
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
