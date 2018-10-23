@@ -23,11 +23,7 @@ jobs:
           name: BRANCH
           command: |
               if [ $CIRCLE_BRANCH = "master"]; then
-                if '0' = 'echo git diff --cached --numstat | wc -l']; then
-                  echo "true"
-                else
-                  echo "Nothing to commit: tests passed"
-                fi
+                echo "true";
               else
                 echo "Not master: tests passed"
               fi
