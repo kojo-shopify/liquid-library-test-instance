@@ -21,10 +21,10 @@ jobs:
           command: 'll_build_main'
       - run:
           name: User
-          command: 'echo {{ .Environment.CIRCLE_USER }}'
+          command: 'echo $CIRCLE_BRANCH'
       - run:
           name: BRANCH
-          command: 'echo {{ .Environment.CIRCLE_BRANCH }}'
+          command: 'echo "$CIRCLE_BRANCH"'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
