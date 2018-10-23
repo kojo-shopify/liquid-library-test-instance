@@ -1,16 +1,21 @@
+<<<<<<< HEAD
 # Component 2
 Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula.
+=======
+# Component 1
+Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
+>>>>>>> b31506cc6214eb5639ef6540f4dd6ac1899d2d4d
 
  ## Table of contents
-1. [Breadcrumb Navigation](#breadcrumb-navigation)
-
-
+1. [Breadcrumb Navigation](#breadcrumb-navigation) 
+ 
+ 
 ------
 ### <a name="breadcrumb-navigation">Breadcrumb Navigation</a>
 A Breadcrumb navigation or breadcrumbs, can reduce the number of actions a visitor needs to take in order to navigate to a higher-level page, and improve the discoverability of a website’s sections and pages. Like all navigations, this uses the [linklist] (https://help.shopify.com/en/themes/liquid/objects/linklist) object.
 
 1.  Place the following code in the `theme.liquid` file, just inside the main content wrapper, or wherever you wish the breadcrumb to appear.
-2.  Another stehat *uses* markdown.
+2.  Another step that *uses* markdown.
 
 ```liquid
 {% unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' %}
@@ -25,4 +30,4 @@ A Breadcrumb navigation or breadcrumbs, can reduce the number of actions a visit
     {% if collection.url %}
       <li> {{ collection.title | link_to: collection.url }}</li>
 ```
-`#navigation` `#linklist`
+`#navigation` `#linklist` 
