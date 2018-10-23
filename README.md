@@ -11,15 +11,20 @@ Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Int
  
 <details><summary>VIEW FULL EXAMPLE LIST</summary>
 
- - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_1#breadcrumb_navigation.liquid">BREADCRUMB NAVIGATION.LIQUID</a> 
- - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_1#dropdown_functionality.liquid">DROPDOWN FUNCTIONALITY.LIQUID</a> 
+ - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_1#breadcrumb_navigation">Breadcrumb Navigation</a> 
+ - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_1#dropdown_functionality">Dropdown Functionality</a> 
 </details>
 
+<<<<<<< HEAD
+### <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_2">Component 2</a>
+Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula.
+=======
 # Component 1
 Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
+>>>>>>> b31506cc6214eb5639ef6540f4dd6ac1899d2d4d 
 
  
 <details><summary>VIEW FULL EXAMPLE LIST</summary>
 
- - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_2#breadcrumb_navigation.liquid">BREADCRUMB NAVIGATION.LIQUID</a> 
+ - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_2#breadcrumb_navigation">Breadcrumb Navigation</a> 
 </details>

@@ -4,7 +4,7 @@ Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Int
 =======
 # Component 1
 Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
->>>>>>> b31506cc6214eb5639ef6540f4dd6ac1899d2d4d
+>>>>>>> b31506cc6214eb5639ef6540f4dd6ac1899d2d4d 
 
  ## Table of contents
 1. [Breadcrumb Navigation](#breadcrumb-navigation) 
