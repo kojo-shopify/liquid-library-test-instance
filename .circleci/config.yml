@@ -15,7 +15,7 @@ jobs:
             source /home/circleci/.bashrc
       - run:
           name: Test path
-          command: 'ls'
+          command: 'cd ..'
       - run:
           name: Build landing page README.md
           command: 'll_build_main'
