@@ -6,21 +6,18 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install yarn packages
+          name: Global install ll-compiler
           command: 'yarn global add https://github.com/kojo-shopify/liquid-library-test-compiler'
       - run:
-          name: Update PATH
+          name: Update $PATH to include yarn
           command: |
             echo 'export PATH=$HOME/.yarn/bin:$PATH' >> $BASH_ENV
             source /home/circleci/.bashrc
       - run:
-          name: Test path
-          command: 'ls'
-      - run:
-          name: Build landing page README.md
+          name: Build component README.md
           command: 'll_build_cat'
       - run:
-          name: Build component README.md
+          name: Build landing page README.md
           command: 'll_build_main'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
