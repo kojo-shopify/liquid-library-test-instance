@@ -27,8 +27,7 @@ jobs:
           name: Deploy to Github
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-               VERSION=$(liquid-library-test-instance --version)
-               ghr -t ${ll_repo} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./
+               ghr -t ${ll_repo} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete 1.0./
             else
               echo "Not master: tests passed"
             fi
