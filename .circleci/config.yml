@@ -19,10 +19,17 @@ jobs:
       - run:
           name: Build landing page README.md
           command: 'll_build_main'
-      - run:
-          name: Git status
-          command: git status
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/liquid-library-test-compiler
+      - deploy:
+          name: Deploy to Github
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              git add .
+              git commit -m "CIRCLECI: project README files updated"
+              git push origin master
+            else
+              echo "Not master: tests passed"
+            fi
