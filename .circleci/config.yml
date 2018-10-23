@@ -20,8 +20,11 @@ jobs:
           name: Build landing page README.md
           command: 'll_build_main'
       - run:
-          name: Show Me file changes
-          command: 'git status'
+          name: Show Me user
+          command: '${CIRCLE_USERNAME}'
+      - run:
+          name: Show Me tags
+          command: '${CIRCLE_USERNAME}'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -29,10 +32,11 @@ jobs:
       - deploy:
           name: Deploy to Github
           command: |
-            if [ "${CIRCLE_BRANCH}" = "master" && "${CIRCLE_USERNAME}" = "Kojo [CIRCLECI]" ]; then
+            if [ "${CIRCLE_BRANCH}" = "master"]; then
               git config --global user.email "kojo.odapagyan@shopify.com"
               git config --global user.name "Kojo [CIRCLECI]"
               git add .
+              date +%Y%m%d
               git commit -m "CIRCLECI: project README files updated"
               git push origin master
             else
