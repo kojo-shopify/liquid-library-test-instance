@@ -21,10 +21,10 @@ jobs:
           command: 'll_build_main'
       - run:
           name: User
-          command: 'echo $CIRCLE_USER'
+          command: 'echo "$CIRCLE_USER"'
       - run:
           name: BRANCH
-          command: echo git diff --cached --numstat | wc -l
+          command: if [echo git diff --cached --numstat | wc -l = 0]; then true else false fi
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -32,7 +32,7 @@ jobs:
       - deploy:
           name: Deploy to Github
           command: |
-            if [ ""$CIRCLE_BRANCH" = "master"]; then
+            if [ "$CIRCLE_BRANCH" = "master"]; then
               git config --global user.email "kojo.odapagyan@shopify.com"
               git config --global user.name "Kojo [CIRCLECI]"
               git add .
