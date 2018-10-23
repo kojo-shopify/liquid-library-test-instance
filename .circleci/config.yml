@@ -15,13 +15,13 @@ jobs:
             source /home/circleci/.bashrc
       - run:
           name: Test path
-          command: 'cd ..'
+          command: 'ls'
       - run:
           name: Build landing page README.md
-          command: 'll_build_main'
+          command: 'll_build_cat'
       - run:
           name: Build component README.md
-          command: 'll_build_cat'
+          command: 'll_build_main'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
