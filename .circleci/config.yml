@@ -20,11 +20,8 @@ jobs:
           name: Build landing page README.md
           command: 'll_build_main'
       - run:
-          name: User
-          command: 'echo "$CIRCLE_USER"'
-      - run:
           name: BRANCH
-          command: if [echo git diff --cached --numstat | wc -l = 0]; then true else false fi
+          command: if [ '0' = 'echo git diff --cached --numstat | wc -l' ]; then echo "true" else echo "false" fi
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
