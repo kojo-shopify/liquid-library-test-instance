@@ -12,6 +12,9 @@ jobs:
           name: Update PATH
           command: 'PATH=$PATH:$(yarn global bin)'
       - run:
+          name: Test path
+          command: 'echo $PATH'
+      - run:
           name: Build landing page README.md
           command: 'll_build_main'
       - run:
