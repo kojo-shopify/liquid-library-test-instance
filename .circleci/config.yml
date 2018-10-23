@@ -22,11 +22,16 @@ jobs:
       - run:
           name: BRANCH
           command: |
-            if [ $CIRCLE_BRANCH = 'master' & '0' = 'echo git diff --cached --numstat | wc -l']; then
-              echo "true"
-            else
-              echo "false"
-            fi
+              if [ $CIRCLE_BRANCH = "master"]; then
+                if '0' = 'echo git diff --cached --numstat | wc -l']; then
+                  echo "true"
+                else
+                  echo "Nothing to commit: tests passed"
+                fi
+              else
+                echo "Not master: tests passed"
+              fi
+
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -34,7 +39,7 @@ jobs:
       - deploy:
           name: Deploy to Github
           command: |
-            if [ "$CIRCLE_BRANCH" = "master"]; then
+            if [ $CIRCLE_BRANCH = "master"]; then
               if '0' = 'echo git diff --cached --numstat | wc -l']; then
                 git config --global user.email "kojo.odapagyan@shopify.com"
                 git config --global user.name "Kojo [CIRCLECI]"
