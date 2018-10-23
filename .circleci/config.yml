@@ -22,10 +22,10 @@ jobs:
       - run:
           name: BRANCH
           command: |
-            if [ '0' = 'git diff --numstat | wc -l' ]; then
-              echo "true"
+            if [ '0' >= 'git diff --numstat | wc -l' ]; then
+              echo $CIRCLE_USER
             else
-              echo "false"
+              echo $CIRCLE_USER
             fi
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
