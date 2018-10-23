@@ -13,7 +13,7 @@ jobs:
           command: 'cd $(yarn global bin) && ls'
       - run:
           name: Build landing page README.md
-          command: 'll_build_main'
+          command: 'll_build_cat'
       - run:
           name: Build component README.md
           command: 'll_build_cat'
