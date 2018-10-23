@@ -35,12 +35,16 @@ jobs:
           name: Deploy to Github
           command: |
             if [ "$CIRCLE_BRANCH" = "master"]; then
-              git config --global user.email "kojo.odapagyan@shopify.com"
-              git config --global user.name "Kojo [CIRCLECI]"
-              git add .
-              date +%Y%m%d
-              git commit -m "CIRCLECI: project README files updated"
-              git push origin master
+              if '0' = 'echo git diff --cached --numstat | wc -l']; then
+                git config --global user.email "kojo.odapagyan@shopify.com"
+                git config --global user.name "Kojo [CIRCLECI]"
+                git add .
+                date +%Y%m%d
+                git commit -m "CIRCLECI: project README files updated"
+                git push origin master
+              else
+                echo "Nothing to commit: tests passed"
+              fi
             else
               echo "Not master: tests passed"
             fi
