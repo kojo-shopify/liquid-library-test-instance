@@ -38,8 +38,8 @@ jobs:
                 git config --global user.email "kojo.odapagyan@shopify.com"
                 git config --global user.name "Kojo [CIRCLECI]"
                 git add .
-                git commit -m "CIRCLECI: project README files updated"
-                git push origin master || { echo 'Updates unnecessary' ; exit 1; }
+                git commit -m "CIRCLECI: project README files updated" || { echo 'Updates unnecessary'; exit 0; }
+                git push origin master
             else
               echo "Not master: tests passed"
             fi
