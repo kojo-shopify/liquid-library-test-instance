@@ -10,7 +10,7 @@ jobs:
           command: 'yarn global add https://github.com/kojo-shopify/liquid-library-test-compiler'
       - run:
           name: Update PATH
-          command: 'PATH=$PATH:$(yarn global bin)'
+          command: 'export PATH="$(yarn global bin):$PATH"'
       - run:
           name: Test path
           command: 'echo $PATH'
