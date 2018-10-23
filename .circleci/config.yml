@@ -19,6 +19,9 @@ jobs:
       - run:
           name: Build landing page README.md
           command: 'll_build_main'
+      - run:
+          name: Show Me file changes
+          command: 'git status'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
