@@ -19,6 +19,12 @@ jobs:
       - run:
           name: Build landing page README.md
           command: 'll_build_main'
+      - run:
+          name: User
+          command: '{{ .Environment.CIRCLE_USER }}'
+      - run:
+          name: BRANCH
+          command: '{{ .Environment.CIRCLE_BRANCH }}'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -26,7 +32,7 @@ jobs:
       - deploy:
           name: Deploy to Github
           command: |
-            if [ "${CIRCLE_BRANCH}" = "master"]; then
+            if [ $CIRCLE_BRANCH = "master"]; then
               git config --global user.email "kojo.odapagyan@shopify.com"
               git config --global user.name "Kojo [CIRCLECI]"
               git add .
