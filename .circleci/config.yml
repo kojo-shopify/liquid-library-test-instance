@@ -23,9 +23,9 @@ jobs:
           name: TEST
           command: |
             if [ '0' = 'echo git diff --cached --numstat | wc -l' ]; then
-              echo "true"
+              echo $CIRCLE_BRANCH
             else
-              echo "false"
+              echo $CIRCLE_BRANCH
             fi
       - run:
           name: BRANCH
