@@ -38,12 +38,8 @@ jobs:
                 git config --global user.email "kojo.odapagyan@shopify.com"
                 git config --global user.name "Kojo [CIRCLECI]"
                 git add .
-              if [ '0' != 'git diff --cached --numstat | wc -l' ]; then
                 git commit -m "CIRCLECI: project README files updated"
-                git push origin master
-              else
-                echo "Nothing to commit: tests passed"
-              fi
+                git push origin master || { echo 'Updates unnecessary' ; exit 1; }
             else
               echo "Not master: tests passed"
             fi
