@@ -10,7 +10,10 @@ jobs:
           command: 'yarn global add https://github.com/kojo-shopify/liquid-library-test-compiler'
       - run:
           name: Test ll
-          command: 'cd $(yarn global bin) && ls'
+          command: 'yarn link "ll-compiler"'
+      - run:
+          name: Test lll
+          command: 'yarn global bin'
       - run:
           name: Build landing page README.md
           command: 'll_build_cat'
