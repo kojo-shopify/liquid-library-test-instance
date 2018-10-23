@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 # Component 2
 Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula.
-=======
-# Component 1
-Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
->>>>>>> b31506cc6214eb5639ef6540f4dd6ac1899d2d4d 
 
  ## Table of contents
-1. [Breadcrumb Navigation](#breadcrumb-navigation) 
- 
- 
+1. [Breadcrumb Navigation](#breadcrumb-navigation)
+
+
 ------
 ### <a name="breadcrumb-navigation">Breadcrumb Navigation</a>
 A Breadcrumb navigation or breadcrumbs, can reduce the number of actions a visitor needs to take in order to navigate to a higher-level page, and improve the discoverability of a website’s sections and pages. Like all navigations, this uses the [linklist] (https://help.shopify.com/en/themes/liquid/objects/linklist) object.
@@ -30,4 +25,4 @@ A Breadcrumb navigation or breadcrumbs, can reduce the number of actions a visit
     {% if collection.url %}
       <li> {{ collection.title | link_to: collection.url }}</li>
 ```
-`#navigation` `#linklist` 
+`#navigation` `#linklist`
