@@ -10,7 +10,7 @@ Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Int
 ### <a name="dropdown-functionality">Dropdown Functionality</a>
 Many types of dropdowns can reduce the number of actions a visitor needs to take in order to navigate to a higher-level page, and improve the discoverability of a website’s sections and pages. Like all navigations, this uses the [linklist] (https://help.shopify.com/en/themes/liquid/objects/linklist) object.
 
-1.  Place the following code in the `theme.liquid` file, just inside the main content wrapper, or wherever you wish the breadcrumb to appear.
+1.  Place the folling code in the `theme.liquid` file, just inside the main content wrapper, or wherever you wish the breadcrumb to appear.
 2.  Another step that *uses* markdown.
 
 ```liquid
