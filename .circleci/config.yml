@@ -22,7 +22,7 @@ jobs:
       - run:
           name: BRANCH
           command: |
-              if [ '$CIRCLE_BRANCH' = 'master']; then
+              if [ $(CIRCLE_BRANCH) = 'master']; then
                 if '0' = 'echo git diff --cached --numstat | wc -l']; then
                   echo "true"
                 else
