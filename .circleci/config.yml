@@ -22,7 +22,7 @@ jobs:
       - run:
           name: BRANCH
           command: |
-            if [ '0' = git diff --numstat | wc -l ]; then
+            if [ '0' = 'git diff --numstat | wc -l' ]; then
               echo "true"
             else
               echo "false"
