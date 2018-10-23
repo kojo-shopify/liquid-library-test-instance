@@ -21,12 +21,7 @@ jobs:
           command: 'll_build_main'
       - run:
           name: BRANCH
-          command: |
-            if git diff-index --quiet HEAD --; then
-              echo "true"
-            else
-              echo "false"
-            fi
+          command: git log -1 --pretty=%B
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -38,7 +33,7 @@ jobs:
                 git config --global user.email "kojo.odapagyan@shopify.com"
                 git config --global user.name "Kojo [CIRCLECI]"
                 git add .
-                echo 'git diff --cached --exit-code'
+                echo git diff --cached --exit-code
               if [ '0' != 'git diff --cached --numstat | wc -l' ]; then
                 git commit -m "CIRCLECI: project README files updated"
                 git push origin master
