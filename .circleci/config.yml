@@ -29,7 +29,7 @@ jobs:
       - deploy:
           name: Deploy to Github
           command: |
-            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+            if [ "${CIRCLE_BRANCH}" = "master" && "${CIRCLE_USERNAME}" = "Kojo [CIRCLECI]" ]; then
               git config --global user.email "kojo.odapagyan@shopify.com"
               git config --global user.name "Kojo [CIRCLECI]"
               git add .
