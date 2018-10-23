@@ -1,31 +1,20 @@
 version: 2
 jobs:
-  build_env:
+  build:
     docker:
       - image: circleci/node
     steps:
       - checkout
       - run:
-          name: Install Yarn Packages
+          name: Install yarn packages
           command: 'yarn global add https://github.com/kojo-shopify/liquid-library-test-compiler'
+      - run:
+          name: Build landing page README.md
+          command: 'll_build_main'
+      - run:
+          name: Build component README.md
+          command: 'll_build_cat'
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/liquid-library-test-compiler
-  build_README:
-    docker:
-      - image: circleci/node
-    steps:
-      - restore_cache:
-        key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          key: v1-bundle-{{ checksum "yarn.lock" }}
-      - run:
-          name: Check folder
-          command: 'ls'
-      - run:
-          name: Build landing page README.md
-          command: 'echo "hello"'
-      - run:
-          name: Build component README.md
-          command: 'll_build_cat'
