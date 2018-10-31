@@ -21,5 +21,15 @@ Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Int
  
 <details><summary>VIEW FULL EXAMPLE LIST</summary>
 
+ - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_2#breadcrumb-navi">Breadcrumb-Navi</a> 
  - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_2#breadcrumb-navigation">Breadcrumb-Navigation</a> 
+</details>
+
+### <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_3">Component 3</a>
+Phasellus non consequat velit. Nulla finibus enim a lacus ultricies lacinia. Integer posuere quis elit at dignissim. Nunc pellentesque ex vitae tortor ultrices efficitur. Phasellus euismod erat vitae porta malesuada. Vivamus rhoncus pulvinar maximus. Sed augue sapien, maximus et odio in, vehicula ultrices ligula. 
+
+ 
+<details><summary>VIEW FULL EXAMPLE LIST</summary>
+
+ - <a href="https://github.com/kojo-shopify/liquid-library-test-instance/tree/master/component_3#breadcrumb-navigation">Breadcrumb-Navigation</a> 
 </details>
